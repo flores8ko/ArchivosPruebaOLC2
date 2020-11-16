@@ -1,6 +1,6 @@
 function forIn_forOf(): void {
     let x: number[] = [0, 1, 4, 5, 6, 7, 8, 9];
-    let y: number[] = new Array(15 - 5);
+    let y: number[] = new array(15 - 5);
     console.log("-------Operaciones con length-------");
     console.log(x.length);//5
     console.log(y.length);//10
@@ -82,9 +82,9 @@ function sentencias(param : boolean): void {
     let iter2: number = 0;
     while (iter < 5 && param) {
         iter2 = 0;
-        console.log("TABLA DEL " + iter);
+        console.log("TABLA DEL " , iter);
         while (iter2 < 5) {
-            console.log(iter + " x " + iter2 + " = " + (iter * iter2) + "\n");
+            console.log(iter , " x " , iter2 , " = " , (iter * iter2) , "\n");
             iter2++;
         }
         iter++;
@@ -125,8 +125,10 @@ function sentencias(param : boolean): void {
 
 function ternario(n : number, m : boolean) : string{
     let val1: number = n == 0 ? 10 : n == 1 ? 20 : n == 2 ? 30 : 40;
-    console.log(val1 == 40 && m ? "Correcto Ternario 1" : "Incorrecto Ternario1");
-    return val1 != 40 ? "Incorrecto Ternario2" : val1 == 40 ? "Correcto Ternario 2" : "Incorrecto Ternario 2";
+    let tmp:string = val1 == 40 && m ? "Correcto Ternario 1" : "Incorrecto Ternario1";
+    console.log(tmp);
+    let tmp2:string =  val1 != 40 ? "Incorrecto Ternario2" : val1 == 40 ? "Correcto Ternario 2" : "Incorrecto Ternario 2";
+    return tmp2;
 }
 
 function switch_(n: number): void {
@@ -142,12 +144,14 @@ function switch_(n: number): void {
         case 2:
             sentencias(true);
         default:
+            sentencias(true);
             console.log('Switch 1 bueno');
     }
 }
 
 switch_(1);
 switch_(3);
+
 
 /*
 -------Operaciones con length-------
@@ -160,26 +164,26 @@ switch_(3);
 1073741824
 8
 INICIA FOR IN
-0 1 2 3 4 5 6 7 
- FOR IN UNA DIMENSION NUMEROS 
+0 1 2 3 4 5 6 7
+ FOR IN UNA DIMENSION NUMEROS
 0
 1
 2
 3
 4
- FOR OF UNA DIMENSION NUMEROS 
+ FOR OF UNA DIMENSION NUMEROS
 0
 1
 4
 5
 6
- FOR IN AUXILIARES[0] 
+ FOR IN AUXILIARES[0]
 0
 1
- FOR OF DOS DIMENSION AUXILIARES[0] 
+ FOR OF DOS DIMENSION AUXILIARES[0]
 Erik
 Pavel
- FOR OF DOS DIMENSION AUXILIARES[1] 
+ FOR OF DOS DIMENSION AUXILIARES[1]
 Maeda
 Christian
 ------------- Ciclos -------------------
@@ -189,8 +193,8 @@ DO WHILE
     CINCO VECES ESTO
     CINCO VECES ESTO
     CINCO VECES ESTO
-    6 7 8 9 10 
-    12 13 14 15 16 
+    6 7 8 9 10
+    12 13 14 15 16
 ------------ WHILE ANIDADO ---------------
 TABLA DEL 0
 0 x 0 = 0
@@ -248,16 +252,16 @@ TABLA DEL 4
 4 x 4 = 16
 
 ------------ FOR ANIDADOS ---------------
-          * 
-         * * 
-        * * * 
-       * * * * 
-      * * * * * 
-     * * * * * * 
-    * * * * * * * 
-   * * * * * * * * 
-  * * * * * * * * * 
- * * * * * * * * * * 
+          *
+         * *
+        * * *
+       * * * *
+      * * * * *
+     * * * * * *
+    * * * * * * *
+   * * * * * * * *
+  * * * * * * * * *
+ * * * * * * * * * *
 If:  100
 Switch 1 bueno
 Correcto Ternario 1
