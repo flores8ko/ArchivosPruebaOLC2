@@ -78,23 +78,31 @@ function printArray(arr:number[]):void{
   console.log(str);
 }
 
-function main():number[] {
+function mainn():any {
   let indice:number = 0;
 	while((true && false) || true){
 	  const arreglo: number[] = [32,7*3,7,89,56,0.909*10000/(5*2),109,2,9,9874**0,44,3,820*10,11,8*0+8,10];
 	  switch(indice){
-		case 0:
-          console.log('--BUBBLESORT--');
-		  bubbleSort(arreglo);
-          printArray(arreglo);
-		break;
+    		case 0:
+        console.log('--BUBBLESORT--');
+	      bubbleSort(arreglo);
+        let str:string = '';
+        for(let i in arreglo){
+      	   str = str + arreglo[i] + ', ';
+        }
+        console.log(str);
+    		break;
 
         case 1:
         console.log('--INSERTIONSORT--');
         console.log('posicion 0 = 0');
         arreglo[0] = arreglo[1] - 21;
         insertionSort(arreglo);
-        printArray(arreglo);
+        let str:string = '';
+        for(let i in arreglo){
+      	   str = str + arreglo[i] + ', ';
+        }
+        console.log(str);
         break;
 
         case 2:
@@ -102,40 +110,52 @@ function main():number[] {
         arreglo[arreglo.length - 1] = 8888;
         console.log('posicion final = 8888');
         quickSort(0,arreglo.length - 1, arreglo);
-        printArray(arreglo);
+        let str:string = '';
+        for(let i in arreglo){
+      	   str = str + arreglo[i] + ', ';
+        }
+        console.log(str);
         indice++;
         break;
 
         case 4:
         console.log('--SELECTIONSORT--');
         selectionSort(arreglo);
-        printArray(arreglo);
+        let str:string = '';
+        for(let i in arreglo){
+      	   str = str + arreglo[i] + ', ';
+        }
+        console.log(str);
         break;
-		  
+
 		default:
           console.log("ARREGLO ORIGINAL");
 		  return arreglo;
 	  }
 	  indice++;
 	}
-  
+
 }
 
-let arr:number[]; 
-arr = main();
-printArray(arr);
+let arr:number[];
+arr = mainn();
+let str:string = '';
+for(let i in arr){
+  str = str + arr[i] + ', ';
+}
+console.log(str);
 
 /*
 --BUBBLESORT--
-1, 2, 3, 7, 8, 9, 10, 11, 21, 32, 44, 56, 89, 109, 909, 8200, 
+1, 2, 3, 7, 8, 9, 10, 11, 21, 32, 44, 56, 89, 109, 909, 8200,
 --INSERTIONSORT--
 posicion 0 = 0
-0, 1, 2, 3, 7, 8, 9, 10, 11, 21, 44, 56, 89, 109, 909, 8200, 
+0, 1, 2, 3, 7, 8, 9, 10, 11, 21, 44, 56, 89, 109, 909, 8200,
 --QUICKSORT--
 posicion final = 8888
-1, 2, 3, 7, 8, 9, 11, 21, 32, 44, 56, 89, 109, 909, 8200, 8888, 
+1, 2, 3, 7, 8, 9, 11, 21, 32, 44, 56, 89, 109, 909, 8200, 8888,
 --SELECTIONSORT--
-1, 2, 3, 7, 8, 9, 10, 11, 21, 32, 44, 56, 89, 109, 909, 8200, 
+1, 2, 3, 7, 8, 9, 10, 11, 21, 32, 44, 56, 89, 109, 909, 8200,
 ARREGLO ORIGINAL
-32, 21, 7, 89, 56, 909, 109, 2, 9, 1, 44, 3, 8200, 11, 8, 10, 
+32, 21, 7, 89, 56, 909, 109, 2, 9, 1, 44, 3, 8200, 11, 8, 10,
 */
