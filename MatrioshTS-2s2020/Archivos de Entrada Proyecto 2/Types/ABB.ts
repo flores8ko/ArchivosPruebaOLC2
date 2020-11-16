@@ -57,7 +57,7 @@ function inOrden(raiz : Nodo) : void{
     }
 }
 
-function cambio(raiz : Nodo, registro : number, nuevoNombe : string) : void{
+/*function cambio(raiz : Nodo, registro : number, nuevoNombe : string) : void{
     if(raiz == null){
         console.log('Indice no encontrado: ', registro);
         return;
@@ -73,14 +73,14 @@ function cambio(raiz : Nodo, registro : number, nuevoNombe : string) : void{
         return;
     }
     cambio(raiz.der, registro, nuevoNombe);
-}
+}*/
 
 function insertarGlobal(nombre : string, edad : number, registro : number) : void{
     let estudiante : Estudiante = {nombre : nombre, edad : edad, registro : registro, esMayor : edad >= 18};
     arbol.raiz = insertar(arbol.raiz, estudiante);
 }
 
-function inOrdenMayores(raiz : Nodo) : void{
+/*function inOrdenMayores(raiz : Nodo) : void{
     if(raiz != null){
         inOrdenMayores(raiz.izq);
         if(raiz.estudiante.esMayor){
@@ -88,7 +88,7 @@ function inOrdenMayores(raiz : Nodo) : void{
         }
         inOrdenMayores(raiz.der);
     }
-}
+}*/
 
 let arbol : Arbol = {raiz : null};
 console.log("-------- INSERTANDO ---------");
@@ -105,11 +105,11 @@ postOrden(arbol.raiz);
 console.log("--------- INORDEN ----------");
 inOrden(arbol.raiz);
 console.log("--------- INORDEN MAYORES ----------");
-inOrdenMayores(arbol.raiz);
+//inOrdenMayores(arbol.raiz);
 console.log("--------- CAMBIANDO --------");
-cambio(arbol.raiz,3,"idnuevo"); 
-cambio(arbol.raiz,4,"no encontrado"); 
-inOrden(arbol.raiz); 
+//cambio(arbol.raiz,3,"idnuevo");
+//cambio(arbol.raiz,4,"no encontrado");
+inOrden(arbol.raiz);
 
 
 /*
